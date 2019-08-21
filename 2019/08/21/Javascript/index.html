@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Javascript | likehui&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="关于Javascript(2)五. 操作符1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%=2.赋值操作符 result += 3 ； 等价于   result = result + 3; var result = 1 + 2;    将1+2这个表达式的运算结果赋值给result                 3.一元运算符​    ① ++     自增    –">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript">
+<meta property="og:url" content="https://github.com/AnnettaLi/AnnettaLi.github.io/2019/08/21/Javascript/index.html">
+<meta property="og:site_name" content="likehui&#39;s blog">
+<meta property="og:description" content="关于Javascript(2)五. 操作符1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%=2.赋值操作符 result += 3 ； 等价于   result = result + 3; var result = 1 + 2;    将1+2这个表达式的运算结果赋值给result                 3.一元运算符​    ① ++     自增    –">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-21T15:19:34.091Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript">
+<meta name="twitter:description" content="关于Javascript(2)五. 操作符1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%=2.赋值操作符 result += 3 ； 等价于   result = result + 3; var result = 1 + 2;    将1+2这个表达式的运算结果赋值给result                 3.一元运算符​    ① ++     自增    –">
+  
+    <link rel="alternate" href="/atom.xml" title="likehui&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Javascript" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/21/Javascript/" class="article-date">
+  <time datetime="2019-08-21T14:04:28.000Z" itemprop="datePublished">2019-08-21</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="关于Javascript-2"><a href="#关于Javascript-2" class="headerlink" title="关于Javascript(2)"></a>关于Javascript(2)</h1><h2 id="五-操作符"><a href="#五-操作符" class="headerlink" title="五. 操作符"></a>五. 操作符</h2><h4 id="1-算术操作符：-、-、-、-、-，-、-、-、-、"><a href="#1-算术操作符：-、-、-、-、-，-、-、-、-、" class="headerlink" title="1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%="></a>1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%=</h4><h4 id="2-赋值操作符"><a href="#2-赋值操作符" class="headerlink" title="2.赋值操作符"></a>2.赋值操作符</h4><ul>
+<li>result += 3 ； 等价于   result = result + 3;</li>
+<li>var result = 1 + 2;    将1+2这个表达式的运算结果赋值给result               </li>
+</ul>
+<h4 id="3-一元运算符"><a href="#3-一元运算符" class="headerlink" title="3.一元运算符"></a>3.一元运算符</h4><p>​    ① ++     自增    –     自减</p>
+<ul>
+<li><p>前置：先自增、减再参与其他运算</p>
+</li>
+<li><p>后置：先参先其他运算，再自增、自减</p>
+</li>
+</ul>
+<p>​    ②+    -   （将其他数据类型转换为数字类型）</p>
+<h4 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4.逻辑运算符"></a>4.逻辑运算符</h4><ul>
+<li><p>&amp;&amp;逻辑与 （短路运算符）：【返回结果不一定是boolean】一假则假全真为真</p>
+</li>
+<li><p>||逻辑或  ：一真则真全假为假</p>
+</li>
+<li><p>!    ：将其他数据类型转换为boolean</p>
+<h4 id="5-比较运算符（比较栈区的值）【返回类型为Boolean】"><a href="#5-比较运算符（比较栈区的值）【返回类型为Boolean】" class="headerlink" title="5.比较运算符（比较栈区的值）【返回类型为Boolean】"></a>5.比较运算符（比较栈区的值）【返回类型为Boolean】</h4></li>
+<li><p>==、!=: 比较值</p>
+</li>
+<li><p>===、!==: 先比较数据类型，如果数据类型不一致，会直接返回false，如果数据类型一致，再比较值。</p>
+</li>
+<li><p>&lt;、&lt;=、&gt;、&gt;=</p>
+</li>
+</ul>
+<h4 id="6-三目运算符"><a href="#6-三目运算符" class="headerlink" title="6.三目运算符"></a>6.三目运算符</h4><p>​    exp1 ? exp2 : exp3  （当exp1为真，返回exp2，否则返回exp3）</p>
+<h4 id="7-位运算符"><a href="#7-位运算符" class="headerlink" title="7.位运算符"></a>7.位运算符</h4><p>​    异或 ^  、位与&amp;   、位或 |</p>
+<p>  ▲&amp;&amp;与&amp;的区别：&amp;&amp;是逻辑运算符 / &amp;是位与运算符。</p>
+<h4 id="8-拼接运算符"><a href="#8-拼接运算符" class="headerlink" title="8. 拼接运算符"></a>8. 拼接运算符</h4><p>​    当操作数有字符串的时候表示拼接 。当使用 “+”，操作数中就出现了字符串。</p>
+<h2 id="六-类型转换"><a href="#六-类型转换" class="headerlink" title="六.类型转换"></a>六.类型转换</h2><h4 id="1-其他数据类型转换为number"><a href="#1-其他数据类型转换为number" class="headerlink" title="1.其他数据类型转换为number"></a>1.其他数据类型转换为number</h4><p>方式一：使用Number()函数</p>
+<pre><code>▲▲▲注意：如果是字符串是纯数字，则转换为数字；如果字符串中有非数字，则转换结果为NaN；如果字符串为空串或者是空格，则结果为0；如果是Boolean类型，true为1，false为0；如果是null,结果为0；如果是undefined，结果为NaN.</code></pre><p>方式二：+v、-(-v)</p>
+<p>方式三: parseInt()方法 ：把一个字符串转换为整数。<strong>可以将一个字符串中的整数内容解析出来，如parseInt(“123.123a123”) 结果为123。</strong></p>
+<p>​              parseFloat()，把一个字符串转换为浮点数。<strong>可以获得有效的小数。</strong></p>
+<p>原文链接：<a href="https://blog.csdn.net/qq_33334214/article/details/80810505" target="_blank" rel="noopener">https://blog.csdn.net/qq_33334214/article/details/80810505</a></p>
+<h4 id="2-其他数据类型转换为boolean"><a href="#2-其他数据类型转换为boolean" class="headerlink" title="2.其他数据类型转换为boolean"></a>2.其他数据类型转换为boolean</h4><p>方式一：使用Boolean()函数 【null false，”” false，NaN false，undefined false】</p>
+<p>方式二：!!</p>
+<h4 id="3-其他数据类型转换为string"><a href="#3-其他数据类型转换为string" class="headerlink" title="3.其他数据类型转换为string"></a>3.其他数据类型转换为string</h4><p>方式一：使用string()函数 </p>
+<p>方式二：v+””</p>
+<p>方式三：v.toString();    //null与undefined除外</p>
+<h2 id="七-流程控制语句"><a href="#七-流程控制语句" class="headerlink" title="七.流程控制语句"></a>七.流程控制语句</h2><h4 id="1-分支语句：if-else-elseif，switch"><a href="#1-分支语句：if-else-elseif，switch" class="headerlink" title="1. 分支语句：if else elseif，switch"></a>1. 分支语句：if else elseif，switch</h4><h4 id="2-循环语句：基本for循环语句，前置判断循环-while循环，后置判断循环-do-while循环"><a href="#2-循环语句：基本for循环语句，前置判断循环-while循环，后置判断循环-do-while循环" class="headerlink" title="2.循环语句：基本for循环语句，前置判断循环 while循环，后置判断循环 do-while循环"></a>2.循环语句：基本for循环语句，前置判断循环 while循环，后置判断循环 do-while循环</h4><p>练习：使用三种循环语句写出99乘法表</p>
+<p>​        ② +   -       </p>
+<p>   将其他数据类型转换为</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/21/Javascript-0/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Javascript</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.webp" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        甜甜圈圈圈圆
+      
+    </h3>
+    <p class="avatar-slogan">
+      新手上路，多多关照。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/21/Javascript/">Javascript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/21/Javascript-0/">Javascript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/02/rule/">rule</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/如何向阿里云导入本地文件/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/first/">first 博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://ivu1314.club" title target='_blank'
+        >EricWang</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 likehui &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

@@ -63,6 +63,84 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-Javascript" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/21/Javascript/">Javascript</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/21/Javascript/" class="article-date">
+  <time datetime="2019-08-21T14:04:28.000Z" itemprop="datePublished">2019-08-21</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="关于Javascript-2"><a href="#关于Javascript-2" class="headerlink" title="关于Javascript(2)"></a>关于Javascript(2)</h1><h2 id="五-操作符"><a href="#五-操作符" class="headerlink" title="五. 操作符"></a>五. 操作符</h2><h4 id="1-算术操作符：-、-、-、-、-，-、-、-、-、"><a href="#1-算术操作符：-、-、-、-、-，-、-、-、-、" class="headerlink" title="1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%="></a>1.算术操作符：+、-、*、/、%， +=、-=、 *=、/=、%=</h4><h4 id="2-赋值操作符"><a href="#2-赋值操作符" class="headerlink" title="2.赋值操作符"></a>2.赋值操作符</h4><ul>
+<li>result += 3 ； 等价于   result = result + 3;</li>
+<li>var result = 1 + 2;    将1+2这个表达式的运算结果赋值给result               </li>
+</ul>
+<h4 id="3-一元运算符"><a href="#3-一元运算符" class="headerlink" title="3.一元运算符"></a>3.一元运算符</h4><p>​    ① ++     自增    –     自减</p>
+<ul>
+<li><p>前置：先自增、减再参与其他运算</p>
+</li>
+<li><p>后置：先参先其他运算，再自增、自减</p>
+</li>
+</ul>
+<p>​    ②+    -   （将其他数据类型转换为数字类型）</p>
+<h4 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4.逻辑运算符"></a>4.逻辑运算符</h4><ul>
+<li><p>&amp;&amp;逻辑与 （短路运算符）：【返回结果不一定是boolean】一假则假全真为真</p>
+</li>
+<li><p>||逻辑或  ：一真则真全假为假</p>
+</li>
+<li><p>!    ：将其他数据类型转换为boolean</p>
+<h4 id="5-比较运算符（比较栈区的值）【返回类型为Boolean】"><a href="#5-比较运算符（比较栈区的值）【返回类型为Boolean】" class="headerlink" title="5.比较运算符（比较栈区的值）【返回类型为Boolean】"></a>5.比较运算符（比较栈区的值）【返回类型为Boolean】</h4></li>
+<li><p>==、!=: 比较值</p>
+</li>
+<li><p>===、!==: 先比较数据类型，如果数据类型不一致，会直接返回false，如果数据类型一致，再比较值。</p>
+</li>
+<li><p>&lt;、&lt;=、&gt;、&gt;=</p>
+</li>
+</ul>
+<h4 id="6-三目运算符"><a href="#6-三目运算符" class="headerlink" title="6.三目运算符"></a>6.三目运算符</h4><p>​    exp1 ? exp2 : exp3  （当exp1为真，返回exp2，否则返回exp3）</p>
+<h4 id="7-位运算符"><a href="#7-位运算符" class="headerlink" title="7.位运算符"></a>7.位运算符</h4><p>​    异或 ^  、位与&amp;   、位或 |</p>
+<p>  ▲&amp;&amp;与&amp;的区别：&amp;&amp;是逻辑运算符 / &amp;是位与运算符。</p>
+<h4 id="8-拼接运算符"><a href="#8-拼接运算符" class="headerlink" title="8. 拼接运算符"></a>8. 拼接运算符</h4><p>​    当操作数有字符串的时候表示拼接 。当使用 “+”，操作数中就出现了字符串。</p>
+<h2 id="六-类型转换"><a href="#六-类型转换" class="headerlink" title="六.类型转换"></a>六.类型转换</h2><h4 id="1-其他数据类型转换为number"><a href="#1-其他数据类型转换为number" class="headerlink" title="1.其他数据类型转换为number"></a>1.其他数据类型转换为number</h4><p>方式一：使用Number()函数</p>
+<pre><code>▲▲▲注意：如果是字符串是纯数字，则转换为数字；如果字符串中有非数字，则转换结果为NaN；如果字符串为空串或者是空格，则结果为0；如果是Boolean类型，true为1，false为0；如果是null,结果为0；如果是undefined，结果为NaN.</code></pre><p>方式二：+v、-(-v)</p>
+<p>方式三: parseInt()方法 ：把一个字符串转换为整数。<strong>可以将一个字符串中的整数内容解析出来，如parseInt(“123.123a123”) 结果为123。</strong></p>
+<p>​              parseFloat()，把一个字符串转换为浮点数。<strong>可以获得有效的小数。</strong></p>
+<p>原文链接：<a href="https://blog.csdn.net/qq_33334214/article/details/80810505" target="_blank" rel="noopener">https://blog.csdn.net/qq_33334214/article/details/80810505</a></p>
+<h4 id="2-其他数据类型转换为boolean"><a href="#2-其他数据类型转换为boolean" class="headerlink" title="2.其他数据类型转换为boolean"></a>2.其他数据类型转换为boolean</h4><p>方式一：使用Boolean()函数 【null false，”” false，NaN false，undefined false】</p>
+<p>方式二：!!</p>
+<h4 id="3-其他数据类型转换为string"><a href="#3-其他数据类型转换为string" class="headerlink" title="3.其他数据类型转换为string"></a>3.其他数据类型转换为string</h4><p>方式一：使用string()函数 </p>
+<p>方式二：v+””</p>
+<p>方式三：v.toString();    //null与undefined除外</p>
+<h2 id="七-流程控制语句"><a href="#七-流程控制语句" class="headerlink" title="七.流程控制语句"></a>七.流程控制语句</h2><h4 id="1-分支语句：if-else-elseif，switch"><a href="#1-分支语句：if-else-elseif，switch" class="headerlink" title="1. 分支语句：if else elseif，switch"></a>1. 分支语句：if else elseif，switch</h4><h4 id="2-循环语句：基本for循环语句，前置判断循环-while循环，后置判断循环-do-while循环"><a href="#2-循环语句：基本for循环语句，前置判断循环-while循环，后置判断循环-do-while循环" class="headerlink" title="2.循环语句：基本for循环语句，前置判断循环 while循环，后置判断循环 do-while循环"></a>2.循环语句：基本for循环语句，前置判断循环 while循环，后置判断循环 do-while循环</h4><p>练习：使用三种循环语句写出99乘法表</p>
+<p>​        ② +   -       </p>
+<p>   将其他数据类型转换为</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-Javascript-0" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -438,6 +516,10 @@
       <ul>
         
           <li>
+            <a href="/2019/08/21/Javascript/">Javascript</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/21/Javascript-0/">Javascript</a>
           </li>
         
@@ -451,10 +533,6 @@
         
           <li>
             <a href="/2019/07/28/first/">first 博客</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/28/hello-world/">Hello World</a>
           </li>
         
       </ul>
