@@ -10,14 +10,17 @@
   
   
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="关于Javascript(1)一. Javascript组成Javascript由三部分组成：1）ECMAScript5（javascript语法标准） 2）DOM （document object model）      js操作html的api 3）BOM （browser object model）      js操作浏览器的api 二. Javascript解释器1)  Javascrip">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Javascript">
 <meta property="og:url" content="https://github.com/AnnettaLi/AnnettaLi.github.io/2019/08/21/Javascript-0/index.html">
 <meta property="og:site_name" content="likehui&#39;s blog">
+<meta property="og:description" content="关于Javascript(1)一. Javascript组成Javascript由三部分组成：1）ECMAScript5（javascript语法标准） 2）DOM （document object model）      js操作html的api 3）BOM （browser object model）      js操作浏览器的api 二. Javascript解释器1)  Javascrip">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-20T16:39:36.027Z">
+<meta property="og:updated_time" content="2019-08-20T16:44:03.740Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript">
+<meta name="twitter:description" content="关于Javascript(1)一. Javascript组成Javascript由三部分组成：1）ECMAScript5（javascript语法标准） 2）DOM （document object model）      js操作html的api 3）BOM （browser object model）      js操作浏览器的api 二. Javascript解释器1)  Javascrip">
   
     <link rel="alternate" href="/atom.xml" title="likehui&#39;s blog" type="application/atom+xml">
   
@@ -91,7 +94,71 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h1 id="关于Javascript-1"><a href="#关于Javascript-1" class="headerlink" title="关于Javascript(1)"></a>关于Javascript(1)</h1><h2 id="一-Javascript组成"><a href="#一-Javascript组成" class="headerlink" title="一. Javascript组成"></a>一. Javascript组成</h2><h4 id="Javascript由三部分组成："><a href="#Javascript由三部分组成：" class="headerlink" title="Javascript由三部分组成："></a>Javascript由三部分组成：</h4><p>1）ECMAScript5（javascript语法标准）</p>
+<p>2）DOM （document object model）<br>      js操作html的api</p>
+<p>3）BOM （browser object model）<br>      js操作浏览器的api</p>
+<h2 id="二-Javascript解释器"><a href="#二-Javascript解释器" class="headerlink" title="二. Javascript解释器"></a>二. Javascript解释器</h2><p>1)  Javascript在所有的主流浏览器中都具备js解释器<br>        js -&gt; 浏览器（客户端）</p>
+<p>2）js不仅仅可以运行在浏览器端，还可以运行在服务器端</p>
+<ul>
+<li>js运行在浏览器端：动画，表单验证，ajax数据交互…</li>
+<li>js运行在服务器端：js转换，代码编译，操作数据库，流，网络, iot             </li>
+</ul>
+<h2 id="三-Javascript运用"><a href="#三-Javascript运用" class="headerlink" title="三. Javascript运用"></a>三. Javascript运用</h2><p>1）创建一个文件并进入vim<br>        vi  1-switch.js</p>
+<p>2）编写文件</p>
+<p>​        var  day = 1；</p>
+<p>​        switch(day){<br>​            case 1:<br>​                console.log(“周一”);<br>​                break;<br>​            case 2:<br>​                console.log(“周二”);<br>​                break;<br>​            …<br>​            default:<br>​                console.log(“周末”);</p>
+<p>​          }</p>
+<p>3) 执行代码<br>        $ node  1-switch.js</p>
+<ul>
+<li>console.log(a,b,c); 将a,b,c变量的内容打印到控制台中</li>
+</ul>
+<h2 id="四-变量"><a href="#四-变量" class="headerlink" title="四. 变量"></a>四. 变量</h2><ul>
+<li>强类型  （变量的数据类型取决于变量的声明）</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例：int a = 3;</span><br><span class="line">a是个整数类型，由于int a ;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>弱类型（变量的数据类型取决于值的类）</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例：var a = 3;	//变量的声明与初始化一起</span><br><span class="line">a是个数字类型，由于a = 3;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>变量声明<br>  例：var a;</p>
+<pre><code>var str;</code></pre></li>
+<li><p>变量初始化<br>  例：a = true;</p>
+<pre><code>str = 1;</code></pre></li>
+<li><p><strong>变量类型</strong></p>
+<p><strong>1）基本数据类型</strong></p>
+<p>​            <strong><em>1.数字类型 number</em></strong><br>​                var a = 3;<br>​                var a = 3.0;<br>​                var a = 011;<br>​                var a = 0x11;</p>
+<p>​            <strong><em>2.字符串类型 string</em></strong><br>​                var str = “hello world”;<br>​                var str = ‘hello’;<br>​                var str = ‘{“name”:”terry”}’</p>
+<p>​            <strong><em>3.布尔类型 boolean</em></strong><br>​                var b = true;<br>​                var b = false;</p>
+<p>​            <strong><em>4.null object</em></strong><br>​                一般表示空对象<br>​                var a = null;</p>
+<p>​            <strong><em>5.undefined</em></strong><br>​                var a;                            // undefined<br>​                var a = undefined;    //undefined</p>
+<p><strong>2）引用数据类型</strong></p>
+<p>​            1.数组</p>
+<p>​            2.对象</p>
+<p>​            3.函数</p>
+<p>​            4.正则表达式</p>
+<p> <strong>3）检测数据类型</strong></p>
+<ul>
+<li><p>typeof a</p>
+</li>
+<li><p>isNaN(result)</p>
+<p>如果result是NaN,那么这个函数返回true。  NaN :不是数值</p>
+</li>
+<li><p>isFinite(result)</p>
+<p>如果result是一个有穷数，返回true</p>
+<p><strong>4）基本数据类型与引用数据类型在内存中的表示</strong></p>
+</li>
+<li><p>基本数据类型的值保存在栈区</p>
+</li>
+<li><p>引用数据类型的引用地址保存在栈区，内容保存在堆区</p>
+</li>
+</ul>
+<p>​       </p>
+</li>
+</ul>
+
       
     </div>
     
@@ -108,8 +175,8 @@
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/08/20/JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">JavaScript</div>
+      <a href="/2019/08/02/rule/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">rule</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
@@ -182,19 +249,19 @@ gitment.render('gitmentContainer')
           </li>
         
           <li>
-            <a href="/2019/08/20/JavaScript/">JavaScript</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/08/rules/">rules</a>
-          </li>
-        
-          <li>
             <a href="/2019/08/02/rule/">rule</a>
           </li>
         
           <li>
             <a href="/2019/07/28/如何向阿里云导入本地文件/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/first/">first 博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/hello-world/">Hello World</a>
           </li>
         
       </ul>
