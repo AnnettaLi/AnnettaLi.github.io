@@ -63,6 +63,141 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-Array" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/28/Array/">Array</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/28/Array/" class="article-date">
+  <time datetime="2019-08-28T14:53:16.000Z" itemprop="datePublished">2019-08-28</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h3 id="1-作用"><a href="#1-作用" class="headerlink" title="1.作用"></a>1.作用</h3><p> 数组访问方式</p>
+<p>数组的边界”[]”,数组的组成称为元素，元素与元素之间通过逗号隔开，元素的数据类型没有限制，</p>
+<h3 id="2-实例化数组"><a href="#2-实例化数组" class="headerlink" title="2.实例化数组"></a>2.实例化数组</h3><p>(1)数组的字面量:   var arr=[1,2,3,4,5];</p>
+<p>(2)构造函数:   var arr = new Array();</p>
+<h3 id="3-数组访问方式"><a href="#3-数组访问方式" class="headerlink" title="3.数组访问方式"></a>3.数组访问方式</h3><p>(1)中括号访问符:  索引从0开始，如果指定索引的位置没有值，返回undefined</p>
+<p>(2)数组名[索引]</p>
+<h3 id="4-数组内存"><a href="#4-数组内存" class="headerlink" title="4.数组内存"></a>4.数组内存</h3><p>arr是变量，保存在栈区</p>
+<p>arr是引用数据类型的变量，栈区保存的引用地址，数组的值保存在堆区</p>
+<h3 id="5-数组的属性"><a href="#5-数组的属性" class="headerlink" title="5.数组的属性"></a>5.数组的属性</h3><p>数组也是一种对象，length是表示数组长度的属性，length表示数组中元素的个数</p>
+<h3 id="6-数组的遍历"><a href="#6-数组的遍历" class="headerlink" title="6.数组的遍历"></a>6.数组的遍历</h3><p>(1)使用for循环:         for(var i = 0 ; i&lt;arr.length; i++){<br>                                              var val =arr[i]<br>                                              console.log(val);<br>                                    }</p>
+<p>(2)使用while           </p>
+<p>(3)使用do-while</p>
+<p>(4)使用增强for循环:           for(var key in arr){<br>                                                       var val = arr[key]<br>                                             }</p>
+<h3 id="7-数组相关的API"><a href="#7-数组相关的API" class="headerlink" title="7.数组相关的API"></a>7.数组相关的API</h3><h4 id="1-添加移除元素【改变原值】"><a href="#1-添加移除元素【改变原值】" class="headerlink" title="(1)添加移除元素【改变原值】"></a>(1)添加移除元素【改变原值】</h4><ul>
+<li>push     //入栈，在数组的最后添加一个元素     参数：要入栈的元素     返回值：数组长度</li>
+<li>pop      //出栈，从数组的最后取出一个元素     参数：none      返回值：     出栈的元素</li>
+<li>shift       //出队，将数组中第一个元素取出来     参数：none      返回值：出队的元素</li>
+<li>unshift     //插队，将元素插入在数组的最前面      参数：要插队的元素     返回值：插队后队列的长度</li>
+</ul>
+<h4 id="2-排序方法与反转【改变原值】"><a href="#2-排序方法与反转【改变原值】" class="headerlink" title="(2)排序方法与反转【改变原值】"></a>(2)排序方法与反转【改变原值】</h4><ul>
+<li>sort()        //按照字符在字符编码表中出现的位置进行排序</li>
+<li>sort(comparator)        //comparator为一个比较器函数，函数可以接受两个值a,b；当a位于b之前的时候返回</li>
+<li>reverse            //反转</li>
+</ul>
+<h4 id="3-截取"><a href="#3-截取" class="headerlink" title="(3)截取"></a>(3)截取</h4><ul>
+<li>concat() 【不改变原值】           //将参数中的数组和当前数组合并为一个数组      参数：多个数组       返回值：合并后的数组</li>
+<li>slice(begin,end)【不改变原值】           //从当前数组中截取一个子数组并且范围<pre><code>参数：begin     起始位置；end     结束位置         返回值：截取到的子数组</code></pre></li>
+<li>splice(begin,delete[,p1,p2,…])【改变原值】         //从数组中删除、插入、更新元素         参数：begin起始位置（删除，插入）      delete删除的个数       p1,p2,…插入的值           返回值：删除的元素组成的数组</li>
+</ul>
+<h4 id="4-迭代方法"><a href="#4-迭代方法" class="headerlink" title="(4)迭代方法"></a>(4)迭代方法</h4><ul>
+<li>forEach(function(item,index,arr){})             //遍历当前数组</li>
+<li>every(function(item,index,arr){})              //判断数组中所有的元素是否满足回调函数中给定的条件</li>
+<li>some(function(item,index,arr){})             //判断数组中是否有满足条件的元素</li>
+<li>filter(function(item,index,arr){})</li>
+<li>map(function(item,index,arr){})</li>
+</ul>
+<h4 id="5-序列化方法"><a href="#5-序列化方法" class="headerlink" title="(5)序列化方法"></a>(5)序列化方法</h4><ul>
+<li>toString()        //将数组转换为字符串，数组中的元素通过逗号连接</li>
+<li>join(v)           //将数组转换为字符串，数组中的元素通过v连接</li>
+<li>JSON.stringify();         //将数组转换为JSON字符串</li>
+</ul>
+<h4 id="6-查找方法"><a href="#6-查找方法" class="headerlink" title="(6) 查找方法"></a>(6) 查找方法</h4><ul>
+<li><p>indexOf()</p>
+</li>
+<li><p>lastIndexOf()</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-function" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/28/function/">function</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/28/function/" class="article-date">
+  <time datetime="2019-08-28T11:16:45.000Z" itemprop="datePublished">2019-08-28</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h3 id="1-作用"><a href="#1-作用" class="headerlink" title="1.作用"></a>1.作用</h3><p>(1)特定功能的封装</p>
+<p>(2)构造函数，创建对象模板</p>
+<h3 id="2-函数的定义"><a href="#2-函数的定义" class="headerlink" title="2.函数的定义"></a>2.函数的定义</h3><p>(1)函数声明:   function 函数名(形参) {<br>                    函数体<br>                } </p>
+<p>(2)函数表达式:   var 函数名 = function(形参){};</p>
+<h3 id="3-调用方式"><a href="#3-调用方式" class="headerlink" title="3.调用方式"></a>3.调用方式</h3><p>函数名(实参);<br>函数名.call(this,实参列表);<br>函数名.apply(this,实参数组);</p>
+<h3 id="4-函数声明会提升"><a href="#4-函数声明会提升" class="headerlink" title="4.函数声明会提升"></a>4.函数声明会提升</h3><p>如果一个函数使用函数声明的方式来定义，那么在函数定义之前就可以调用该函数。</p>
+<h3 id="5-函数的作用域"><a href="#5-函数的作用域" class="headerlink" title="5.函数的作用域"></a>5.函数的作用域</h3><p>(1)函数内部申明的变量，函数外部无法访问</p>
+<p>(2)函数执行完毕后，函数内部的变量会被释放</p>
+<p>(3)函数内部不存在局部作用域</p>
+<p>(4)函数内部的变量也会被提升</p>
+<h3 id="6-函数内部属性"><a href="#6-函数内部属性" class="headerlink" title="6.函数内部属性"></a>6.函数内部属性</h3><p>(1)形参</p>
+<p>(2)arguments          //接受实参的真正所在，类数组对象</p>
+<p>(3)this                  //当前对象（环境对象） </p>
+<h3 id="7-值传递和引用传递"><a href="#7-值传递和引用传递" class="headerlink" title="7.值传递和引用传递"></a>7.值传递和引用传递</h3><p>值传递：var a = 3;var b = a;a++;</p>
+<p>引用传递：var a = {age:12,name:”tom”};var b = a; a.age = 12;</p>
+<h3 id="8-函数应用"><a href="#8-函数应用" class="headerlink" title="8.函数应用"></a>8.函数应用</h3><p>(1)值</p>
+<p>(2)参数：回调函数</p>
+<p>(3)返回值：定制函数</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="code-refactoring" class="article global-container article-type-code" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -605,6 +740,14 @@
       <ul>
         
           <li>
+            <a href="/2019/08/28/Array/">Array</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/28/function/">function</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/26/refactoring/">refactoring</a>
           </li>
         
@@ -614,14 +757,6 @@
         
           <li>
             <a href="/2019/08/21/Javascript/">Javascript</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/21/Javascript-0/">Javascript</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/02/rule/">rule</a>
           </li>
         
       </ul>
