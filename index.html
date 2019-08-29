@@ -223,7 +223,11 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h1 id="重构代码"><a href="#重构代码" class="headerlink" title="重构代码"></a>重构代码</h1><h3 id="模拟push，重构myPush代码"><a href="#模拟push，重构myPush代码" class="headerlink" title="模拟push，重构myPush代码"></a>模拟push，重构myPush代码</h3><h3 id="模拟pop，重构myPop代码"><a href="#模拟pop，重构myPop代码" class="headerlink" title="模拟pop，重构myPop代码"></a>模拟pop，重构myPop代码</h3><p>从数组的最后取出一个元素<br>        返回值：出栈的元素<br>        原数组删除最后一个数</p>
+        <h1 id="重构代码"><a href="#重构代码" class="headerlink" title="重构代码"></a>重构代码</h1><h3 id="模拟push，重构myPush代码"><a href="#模拟push，重构myPush代码" class="headerlink" title="模拟push，重构myPush代码"></a>模拟push，重构myPush代码</h3><p>入栈，在数组的最后添加一个元素<br>        参数：要入栈的元素<br>        返回值：数组长度</p>
+<p>代码：</p>
+<p>Array.prototype.mypush = function(){<br>             len= this.length;<br>             for(j=0;j&lt;arguments.length;j++){<br>                this[len+j] = arguments[j];<br>             }<br>             len= this.length;<br>             return len;<br>        }</p>
+<p>var arr = [1,2,3,4,5];<br>    var result = arr.mypush(8,”tom”);<br>    console.log(arr);<br>    console.log(result);</p>
+<h3 id="模拟pop，重构myPop代码"><a href="#模拟pop，重构myPop代码" class="headerlink" title="模拟pop，重构myPop代码"></a>模拟pop，重构myPop代码</h3><p>从数组的最后取出一个元素<br>        返回值：出栈的元素<br>        原数组删除最后一个数</p>
 <p>代码：</p>
 <p> Array.prototype.mypop = function(){</p>
 <p>​         var result = this[this.length-1];</p>
