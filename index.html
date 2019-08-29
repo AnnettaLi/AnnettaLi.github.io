@@ -63,6 +63,82 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="reguler-expression" class="article global-container article-type-reguler" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/expression/">expression</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/29/expression/" class="article-date">
+  <time datetime="2019-08-29T02:15:34.000Z" itemprop="datePublished">2019-08-29</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="1-实例化正则表达式对象"><a href="#1-实例化正则表达式对象" class="headerlink" title="1.实例化正则表达式对象"></a>1.实例化正则表达式对象</h2><p>(1)构造函数模式:  var pattern = new RegExp(“正则表达式”,”模式”); </p>
+<p>(2)正则表达式字面量<br>            var pattern = /正则表达式/模式<br>            var pattern = /[0-9]{4}-[0-9]{7}/gim</p>
+<h2 id="2-正则表达式"><a href="#2-正则表达式" class="headerlink" title="2.正则表达式"></a>2.正则表达式</h2><h3 id="1-字符类"><a href="#1-字符类" class="headerlink" title="(1)字符类"></a>(1)字符类</h3><ul>
+<li>.            //匹配任何单个字符</li>
+<li>\d           //匹配任意数字，等价于[0-9]</li>
+<li>\D           //匹配任意非数字</li>
+<li>[^0-9]            //等价于\D，上箭头在中括号中表示非</li>
+<li>^[0-9]              //表示任意一个数字作为一行的开始</li>
+<li>\w            //字符，等价于[a-zA-Z0-9_]</li>
+<li>\W            //非字符，等价于 [^a-zA-Z0-9_]</li>
+<li>\s         空白字符，tab,return,space…</li>
+<li>\S         非空白字符</li>
+</ul>
+<h3 id="2-分组"><a href="#2-分组" class="headerlink" title="(2)分组"></a>(2)分组</h3><p>/[a-z][0-9]/[0-9]ig</p>
+<p>/([a-z])([0-9])/ig</p>
+<h3 id="3-数量词"><a href="#3-数量词" class="headerlink" title="(3) 数量词"></a>(3) 数量词</h3><ul>
+<li>*/{0,}             //将前面的表达式匹配0次或多次</li>
+<li>+/{1,}             //将前面的表达式匹配1次或多次</li>
+<li>?/{0,1}           //将前面的表达式匹配0次或1次</li>
+<li>贪婪匹配(默认情况下)             /\d{2,}/</li>
+<li>非贪婪匹配                 /\d{2,}?/</li>
+</ul>
+<h2 id="3-模式"><a href="#3-模式" class="headerlink" title="3.模式"></a>3.模式</h2><ul>
+<li>i     ignoreCase</li>
+<li>g     global</li>
+<li>m     multiline</li>
+</ul>
+<h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>lastIndex                 //如果模式中包含g,每次执行test或者exec的时候，都会维护这个属性，下一次搜索开始的位置;如果模式中不包含g,lastIndex为0。。</li>
+<li>ignoreCase           //如果模式中包含i，返回true</li>
+<li>global              //如果模式中包含g，返回true</li>
+<li>multiline            //如果模式中包含m，返回true</li>
+<li>source                //正则表达式的字符串表示</li>
+<li>flags              //正则表达式模式的字符串表示</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>test(str)              //使用正则表达式对象测试str，如果str满足正则表达式返回true,否则返回false</p>
+</li>
+<li><p>exec(str)             //从str中查找出满足正则表达式的字符串</p>
+</li>
+</ul>
+<h2 id="5-作用：匹配、查找"><a href="#5-作用：匹配、查找" class="headerlink" title="5.作用：匹配、查找"></a>5.作用：匹配、查找</h2>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-Array" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -114,7 +190,7 @@
 </ul>
 <h4 id="3-截取"><a href="#3-截取" class="headerlink" title="(3)截取"></a>(3)截取</h4><ul>
 <li>concat() 【不改变原值】           //将参数中的数组和当前数组合并为一个数组      参数：多个数组       返回值：合并后的数组</li>
-<li>slice(begin,end)【不改变原值】           //从当前数组中截取一个子数组并且范围<pre><code>参数：begin     起始位置；end     结束位置         返回值：截取到的子数组</code></pre></li>
+<li>slice(begin,end)【不改变原值】           //从当前数组中截取一个子数组并且返回<pre><code>参数：begin     起始位置；end     结束位置        返回值：截取到的子数组</code></pre></li>
 <li>splice(begin,delete[,p1,p2,…])【改变原值】         //从数组中删除、插入、更新元素         参数：begin起始位置（删除，插入）      delete删除的个数       p1,p2,…插入的值           返回值：删除的元素组成的数组</li>
 </ul>
 <h4 id="4-迭代方法"><a href="#4-迭代方法" class="headerlink" title="(4)迭代方法"></a>(4)迭代方法</h4><ul>
@@ -650,55 +726,12 @@
 </article>
 
   
-    <article id="post-hello-world" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/28/hello-world/">Hello World</a>
-    </h1>
-  
 
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/28/hello-world/" class="article-date">
-  <time datetime="2019-07-28T05:22:16.931Z" itemprop="datePublished">2019-07-28</time>
-</a>
+
+  <nav id="page-nav">
     
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+  </nav>
 
 
 </section>
@@ -744,6 +777,10 @@
       <ul>
         
           <li>
+            <a href="/2019/08/29/expression/">expression</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/28/Array/">Array</a>
           </li>
         
@@ -757,10 +794,6 @@
         
           <li>
             <a href="/2019/08/24/Javascript-1/">Javascript</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/21/Javascript/">Javascript</a>
           </li>
         
       </ul>
