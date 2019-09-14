@@ -63,6 +63,100 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="bootstrap-Layout" class="article global-container article-type-bootstrap" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/14/Layout/">Layout</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/09/14/Layout/" class="article-date">
+  <time datetime="2019-09-14T05:11:27.000Z" itemprop="datePublished">2019-09-14</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="Bootstrap-Layout-布局"><a href="#Bootstrap-Layout-布局" class="headerlink" title="Bootstrap-Layout(布局)"></a>Bootstrap-Layout(布局)</h1><h4 id="注：如果开发响应式网站，在head中添加如下代码"><a href="#注：如果开发响应式网站，在head中添加如下代码" class="headerlink" title="注：如果开发响应式网站，在head中添加如下代码"></a>注：如果开发响应式网站，在head中添加如下代码</h4><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<p>目的：使用相对单位解释px</p>
+<h2 id="一-Overview"><a href="#一-Overview" class="headerlink" title="一.Overview"></a>一.Overview</h2><ul>
+<li>container</li>
+<li>container-fluid</li>
+</ul>
+<h2 id="二-Grid-网格"><a href="#二-Grid-网格" class="headerlink" title="二.Grid(网格)"></a>二.Grid(网格)</h2><ul>
+<li>row</li>
+<li>col<ul>
+<li>col-sm      col-md      col-lg      col-xl</li>
+<li>col-sm-6      col-lg-12…</li>
+</ul>
+</li>
+</ul>
+<p>​         <strong>网格系统:容器/行/列。一行分为12列（12栅格系统）</strong></p>
+<p>​         *<em>移动优先:默认体现移动端（极小屏）的样式，如果想要覆盖这些样式，那需要添加对应大屏样式 *</em></p>
+<ul>
+<li><p>align-items-start</p>
+<p>align-items-center</p>
+<p>align-items-end</p>
+</li>
+</ul>
+<p><img src="D:%5CAppDir%5CMyBlog%5Csource_posts%5CV%7B%7B%7D0XZBDCO%7DFHXLRKJU3QK.png" alt="img"></p>
+<ul>
+<li><p>align-self-start</p>
+<p>align-self-center</p>
+</li>
+</ul>
+<p>​       align-self-end</p>
+<p><img src="D:%5CAppDir%5CMyBlog%5Csource_posts%5CJ(%7DZ2YHZ%5DVGJCTLWM%5B%ON%7DV.png" alt="img"></p>
+<ul>
+<li>justify-content-start</li>
+</ul>
+<p>​       justify-content-center</p>
+<p>​       justify-content-end  </p>
+<p>​       justify-content-around</p>
+<p>​       justify-content-between</p>
+<p><img src="D:%5CAppDir%5CMyBlog%5Csource_posts%5CQQ%E5%9B%BE%E7%89%8720190914141053.png" alt="img"></p>
+<ul>
+<li><p>order(排序)</p>
+<p>order-1     order-12</p>
+</li>
+<li><p>Offset(偏移)</p>
+</li>
+</ul>
+<p>​       Offset-md-4…</p>
+<h2 id="Utilities-for-layout"><a href="#Utilities-for-layout" class="headerlink" title="Utilities for layout"></a>Utilities for layout</h2><ul>
+<li><p>padding  </p>
+<ul>
+<li>px-1 ~ px-5       pl pr(左右边距)</li>
+<li>py-1 ~ py-5       pt pb(上下边距)</li>
+<li>mr-md-3    mt-xl-5…</li>
+</ul>
+</li>
+<li><p>margin</p>
+</li>
+</ul>
+<p>​        ml-auto       mr-auto…(自动外边距 )</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="reguler-expression" class="article global-container article-type-reguler" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -358,7 +452,35 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p># </p>
+        <h1 id="关于Javascript-3"><a href="#关于Javascript-3" class="headerlink" title="关于Javascript(3)"></a>关于Javascript(3)</h1><h2 id="八-回调函数"><a href="#八-回调函数" class="headerlink" title="八.回调函数"></a>八.回调函数</h2><p>实时反馈  ：回调函数</p>
+<p>最终反馈  ：return</p>
+<p>function  bar(handler){</p>
+<p>​       var result  =  “hello world”;</p>
+<p>​       handler(result);</p>
+<p>}</p>
+<p>bar(function(item){</p>
+<p>​       console.log(item);</p>
+<p>});</p>
+<h2 id="九-包装器类型"><a href="#九-包装器类型" class="headerlink" title="九.包装器类型"></a>九.包装器类型</h2><ul>
+<li><p>Number</p>
+</li>
+<li><p>Boolean</p>
+</li>
+<li><h4 id="String-String-prototype-xxx"><a href="#String-String-prototype-xxx" class="headerlink" title="String             //String.prototype.xxx"></a>String             //String.prototype.xxx</h4></li>
+</ul>
+<p>​       (1)length            //获取字符串中字数的数量</p>
+<p>​       (2)charAt(index)           // 获取指定索引处的字符</p>
+<p>​       (3)charCodeAt(index)         //获取指定索引处的字符编码</p>
+<p>​       (4)indexOf()          //获取指定字符在字符串中索引</p>
+<p>​       (5)lastIndexOf()        //获取指定字符在字符串中的索引，【从后往前】</p>
+<p>​       (6)concat()             //连接两个字符串</p>
+<p>​       (7)slice(begin,end)         //截取子字符串，begin开始位置，end结束位置，不包含结束位置</p>
+<p>​       (8)substring(begin,end)             //截取子字符串，begin开始位置，end结束位置，不包含结束位置</p>
+<p>​       (9)substr(begin,length)           //截取子字符串，begin开始位置，length截取的字符的个数</p>
+<p>​       (10)trim()            //删除字符串左右两边的空格</p>
+<p>​       (11)toUpperCase()          //转换为大小</p>
+<p>​       (12)toLowerCase()          //转换为小写</p>
+<p>​      </p>
 
       
     </div>
@@ -690,42 +812,6 @@
 </article>
 
   
-    <article id="post-first" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/28/first/">first 博客</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/07/28/first/" class="article-date">
-  <time datetime="2019-07-28T07:36:03.000Z" itemprop="datePublished">2019-07-28</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>这是我的第一条博客！</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -765,7 +851,7 @@
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
     </div>
   </div>
 
@@ -775,6 +861,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/09/14/Layout/">Layout</a>
+          </li>
         
           <li>
             <a href="/2019/08/29/expression/">expression</a>
@@ -790,10 +880,6 @@
         
           <li>
             <a href="/2019/08/26/refactoring/">refactoring</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/24/Javascript-1/">Javascript</a>
           </li>
         
       </ul>
